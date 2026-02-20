@@ -1,4 +1,4 @@
-# Crypto vs Global Markets — Multivariate Regression
+# Crypto vs Global Markets — Multivariate Regression (MBA Capstone)
 
 Projeto final do MBA em Business Analytics & Big Data (FGV): análise e modelagem para **explicar/prever o preço (Y)** de 5 criptomoedas usando **mercados globais e moedas (X)**, com **engenharia de features temporais (lags e médias móveis)** e **Regressão Linear Múltipla** com seleção de variáveis.
 
@@ -70,7 +70,69 @@ Este repositório inclui como base principal a versão “pós-pandemia” com c
 O projeto contém diversos resultados por cripto e por base. Como destaque de explicabilidade, o **BTC** apresentou um dos melhores desempenhos com um modelo simplificado usando apenas a **NASDAQ** com lags, alcançando **R² mediano de teste ~0,58** e **RMSE% ~13,64**.
 
 ### Equação reportada no estudo de caso
-```text
-BTC_USD_prev = -74205.38
-             + 5.2930 * NASDAQ_EUA_lag_7
-             + 2.9192 * NASDAQ_EUA_lag_50
+`BTC_USD_prev = -74205.38 + 5.2930 * NASDAQ_EUA_lag_7 + 2.9192 * NASDAQ_EUA_lag_50`
+
+**Interpretação:** a variação do BTC no tempo pode ser parcialmente explicada por movimentos defasados da NASDAQ (7 e 50 dias).
+
+Para consultar o ranking completo dos melhores modelos por variável-alvo, veja:
+- `reports/results_best_all_times.csv`
+
+---
+
+## 7) Estrutura do repositório
+
+/
+├─ README.md  
+├─ data/  
+│  └─ processed/  
+│     ├─ all_lags_mms_2022.csv  (base canônica, pós-pandemia)  
+│     └─ all_lags_mms_2020.csv  (benchmark, a partir de 2020)  
+├─ docs/  
+│  └─ data_catalog.csv  (catálogo/descrição das bases; origem: summary.csv)  
+├─ reports/  
+│  └─ results_best_all_times.csv  (melhores modelos e métricas)  
+├─ presentation/  
+│  └─ Analise_Criptomoedas_x_Mercados_Mundiais_FINAL.pptx  
+├─ notebooks/  
+│  ├─ cripto_download_analise_exploratoria.ipynb  
+│  └─ cripto_regressoes.ipynb  
+└─ src/  
+   └─ (em evolução: pipeline, features, modelagem, avaliação)
+
+---
+
+## 8) Como reproduzir (local)
+
+### Pré-requisitos
+- Python 3.10+ (recomendado)
+- bibliotecas típicas de ciência de dados: `pandas`, `numpy`, `matplotlib`, `scikit-learn`, `statsmodels`
+- para download de dados (se você refizer o pipeline): `yfinance`
+
+### Passos rápidos
+1. Clone o repositório
+2. (Opcional) Crie um ambiente virtual
+3. Instale dependências
+4. Rode os notebooks em ordem:
+   - `notebooks/cripto_download_analise_exploratoria.ipynb`
+   - `notebooks/cripto_regressoes.ipynb`
+
+Observação: este repo prioriza **reprodutibilidade** e **clareza**. A tendência é evoluir os notebooks para um pipeline em `src/` (funções reutilizáveis para ingestão, features e modelagem).
+
+---
+
+## 9) Limitações e próximos passos
+
+### Limitações (esperadas)
+- Criptomoedas são altamente influenciadas por fatores não observados (sentimento, notícias, liquidez, eventos on-chain).
+- Relações podem ser não lineares e variar ao longo do tempo (regime changes).
+
+### Próximos passos (roadmap)
+- Transformar o notebook de features em pipeline modular (`src/features.py`)
+- Testar regularização (Ridge/Lasso/ElasticNet) para lidar com multicolinearidade
+- Validar com **time series split** (walk-forward) e comparar estabilidade
+- Incluir variáveis exógenas adicionais (ex.: indicadores macro, taxas, proxies de risco)
+
+---
+
+## 10) Artefatos
+- Apresentação final: `presentation/Analise_Criptomoedas_x_Mercados_Mundiais_FINAL.pptx`
