@@ -1,0 +1,17 @@
+Data Frame,Descrição,Data Inicial,Data Final,Colunas
+df_lags,Somente nossos X com lags,2017-01-01,2025-03-31,Lag7 - Lag50
+df_lags_mms,Somente nossos X com alguns lags e MMs,2017-01-01,2025-03-31,"Lag7, Lag14, Lag21, Lag28, MM10, MM20, MM30"
+all_lags_2020,Todos os Y e X com lags desde 2020,2020-04-10,2025-03-31,"BTC, ETH, XRP, SOL, BNB, Bolsas de Lag7 - Lag50"
+all_lags_mms_2020,Todos os Y e X com lags e mms desde 2020,2020-04-10,2025-03-31,"BTC, ETH, XRP, SOL, BNB, BolsaLag7, BolsaLag14, BolsaLag21, BolsaLag28, BolsaMM10, BolsaMM20, BolsaMM30"
+all_lags_2022,Todos os Y e X com lags desde 2022 (pós pandemia),2022-06-01,2025-03-31,"BTC, ETH, XRP, SOL, BNB, Bolsas de Lag7 - Lag50"
+all_lags_mms_2022,Todos os Y e X com lags e mms desde 2022 (pós pandemia),2022-06-01,2025-03-31,"BTC, ETH, XRP, SOL, BNB, BolsaLag7, BolsaLag14, BolsaLag21, BolsaLag28, BolsaMM10, BolsaMM20, BolsaMM30"
+btc_lags,"BTC, os X com lags e o máximo de período da moeda",2017-01-01,2025-03-31,"BTC, Bolsas de Lag7 - Lag50"
+btc_lags_mms,"BTC, os X com lags e mms e o máximo de período da moeda",2017-01-01,2025-03-31,"BTC, BolsaLag7, BolsaLag14, BolsaLag21, BolsaLag28, BolsaMM10, BolsaMM20, BolsaMM30"
+eth_lags,"ETH, os X com lags e o máximo de período da moeda",2017-11-09,2025-03-31,"ETH, Bolsas de Lag7 - Lag50"
+eth_lags_mms,"ETH, os X com lags e mms e o máximo de período da moeda",2017-11-09,2025-03-31,"ETH, BolsaLag7, BolsaLag14, BolsaLag21, BolsaLag28, BolsaMM10, BolsaMM20, BolsaMM30"
+xrp_lags,"XRP, os X com lags e o máximo de período da moeda",2017-11-09,2025-03-31,"XRP, Bolsas de Lag7 - Lag50"
+xrp_lags_mms,"XRP, os X com lags e mms e o máximo de período da moeda",2017-11-09,2025-03-31,"XRP, BolsaLag7, BolsaLag14, BolsaLag21, BolsaLag28, BolsaMM10, BolsaMM20, BolsaMM30"
+sol_lags,"SOL, os X com lags e o máximo de período da moeda",2020-04-10,2025-03-31,"SOL, Bolsas de Lag7 - Lag50"
+sol_lags_mms,"SOL, os X com lags e mms e o máximo de período da moeda",2020-04-10,2025-03-31,"SOL, BolsaLag7, BolsaLag14, BolsaLag21, BolsaLag28, BolsaMM10, BolsaMM20, BolsaMM30"
+bnb_lags,"BNB, os X com lags e o máximo de período da moeda",2017-11-09,2025-03-31,"BNB, Bolsas de Lag7 - Lag50"
+bnb_lags_mms,"BNB, os X com lags e mms e o máximo de período da moeda",2017-11-09,2025-03-31,"BNB, BolsaLag7, BolsaLag14, BolsaLag21, BolsaLag28, BolsaMM10, BolsaMM20, BolsaMM30"
